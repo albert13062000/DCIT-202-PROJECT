@@ -1,56 +1,27 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image,} from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Landing from './Landing';
+import Home from './home'
 
-export default function App() {
-  // const [flag,setflag] = useState(true)
-  // const [state, setstate] = useState(initialState)
-  // useEffect(() => {
-  //   effect
-  //   return () => {
-  //     cleanup
-  //   }
-  // }, [input])
+export default function App({ navigation }) {
   
-    
-  
+  const Stack = createStackNavigator();
   return (
+    <NavigationContainer>
 
-    <View style={styles.container}>
-      <StatusBar style="auto" />
-    
-    <View style={styles.container2}>
-        <Text>ALBERTO AUTO DEALERSHIP</Text>
-    </View>
-
-      
-    <View style={styles.container3}>
-      <Text>This is my shopping app</Text>
-      <Text>hellow</Text>
-        
-    </View>
-
-    </View>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false
+        }}>
+        <Stack.Screen name="Landing" component={ Landing } />
+        <Stack.Screen name="Home" component={ Home } />
+        {/* <Stack.Screen name="Notifications" component={Notifications} />
+        <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="Settings" component={Settings} /> */}
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-  const styles = StyleSheet.create({
-  container:{
-    flex: 1,
-    backgroundColor: "#7CA1B4",
-
-},
-  container2:{
-    paddingTop: 30,
-    paddingLeft: 10,
-    alignItems: 'center',
-    justifyContent: "center",
-},
-
-  container3: {
-    padding: 10,
-    alignItems: "center",
-
-    
-  },
-  
-});
