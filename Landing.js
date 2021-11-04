@@ -3,11 +3,11 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 import { AntDesign } from '@expo/vector-icons';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function Landing({ navigation }) {
   
   return (
-
     <View style={styles.container}>
       <StatusBar style="auto" />
         
@@ -16,7 +16,7 @@ export default function Landing({ navigation }) {
                 fontSize: 40,
                 fontWeight: 'bold',
                 marginTop: 20,
-                marginBottom: 30
+                marginBottom: 20
             }}>SeatGeek</Text>
             <Image source ={require("./assets/bmw-x6.jpg")} resizeMode='cover' style ={{width: '80%', height: 300, borderRadius: 20, alignItems: 'center'}}/>
         </View>
@@ -24,7 +24,7 @@ export default function Landing({ navigation }) {
 
 
         <View style={styles.container3}>
-            <Text style={{fontSize: 35, marginTop: 20, fontWeight: 'bold'}}>Log-in</Text>
+            <Text style={{fontSize: 35, fontWeight: 'bold'}}>Log-in</Text>
             <Text style={{
                 fontSize: 18,
                 color: 'grey',
@@ -36,14 +36,14 @@ export default function Landing({ navigation }) {
             <Text style={{fontSize: 18,}}>Username</Text>
             <View style={{flexDirection: 'row'}}>
                 <AntDesign name="user" size={24} color="black" style={{marginTop: 20}}/>
-                <TextInput placeholder="Enter your full name" style={{paddingVertical: 15, paddingHorizontal: 5, borderBottomWidth: 2, borderBottomColor: 'black', borderRadius: 5, width: '87%', marginTop: 10}}></TextInput>
+                <TextInput placeholder="Enter your full name" style={{paddingVertical: 15, paddingHorizontal: 5, borderBottomWidth: 2, borderBottomColor: 'black', borderRadius: 5, width: '80%', marginTop: 10}}></TextInput>
             </View>
         </View>
         <View style={styles.inputText1}>
             <Text style={{fontSize: 18,}}>Password</Text>
             <View style={{flexDirection: 'row'}}>
                 <AntDesign name="lock" size={24} color="black" style={{marginTop: 20,}}/>
-                <TextInput placeholder="Enter your password" secureTextEntry={true} style={{padding: 15, borderBottomWidth: 2, borderBottomColor: 'black',  borderRadius: 5, width: '87%', marginTop: 10}}></TextInput>
+                <TextInput placeholder="Enter your password" secureTextEntry={true} style={{padding: 15, borderBottomWidth: 2, borderBottomColor: 'black',  borderRadius: 5, width: '80%', marginTop: 10}}></TextInput>
             </View>
             
         </View>
@@ -55,13 +55,13 @@ export default function Landing({ navigation }) {
                     width: '60%',
                     borderRadius: '25%',
                     marginTop: 40,
-                    paddingVertical: 15,
+                    paddingVertical: 10,
                     alignItems: 'center' 
                 }
             }
             onPress={() => navigation.navigate('Home')} 
             >
-                <Text style={{color: 'white', fontSize: 18, fontWeight: 'bold'}} >Login</Text>
+                <Text style={{color: 'white', fontSize: 18, fontWeight: 'bold', marginBottom: 10}} >Login</Text>
             </TouchableOpacity>
         </View>
 
