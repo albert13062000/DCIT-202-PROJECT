@@ -32,21 +32,37 @@ export default function Landing({ navigation }) {
             
         </View>
 
-        <View style={styles.inputText}>
+        {/* <View style={styles.inputText}>
             <Text style={{fontSize: 18,}}>Username</Text>
             <View style={{flexDirection: 'row'}}>
                 <AntDesign name="user" size={24} color="black" style={{marginTop: 20}}/>
-                <TextInput placeholder="Enter your full name" style={{paddingVertical: 15, paddingHorizontal: 5, borderBottomWidth: 2, borderBottomColor: 'black', borderRadius: 5, width: '80%', marginTop: 10}}></TextInput>
+                <TextInput placeholder="Enter your full name" style={{paddingVertical: 15, paddingHorizontal: 5, borderBottomWidth: 2, borderBottomColor: 'black', width: '80%', marginTop: 10}}></TextInput>
             </View>
-        </View>
-        <View style={styles.inputText1}>
-            <Text style={{fontSize: 18,}}>Password</Text>
-            <View style={{flexDirection: 'row'}}>
-                <AntDesign name="lock" size={24} color="black" style={{marginTop: 20,}}/>
-                <TextInput placeholder="Enter your password" secureTextEntry={true} style={{padding: 15, borderBottomWidth: 2, borderBottomColor: 'black',  borderRadius: 5, width: '80%', marginTop: 10}}></TextInput>
+        </View> */}
+        <View style={styles.inputText}>
+            <Text style={{fontSize: 18,}}>Username:</Text>
+            <View style={{marginTop: 7, borderWidth: 1, borderColor: 'black', flexDirection: 'row', width: '90%', borderRadius: 10,}}>
+                <AntDesign name="user" size={24} color="black" style={{marginTop: 10, marginLeft: 5}}/>
+                <TextInput placeholder="Enter username" style={{padding: 10, width: '80%', fontSize: 16}}></TextInput>
             </View>
             
         </View>
+        <View style={styles.inputText1}>
+            <Text style={{fontSize: 18,}}>Username:</Text>
+            <View style={{marginTop: 7, borderWidth: 1, borderColor: 'black', flexDirection: 'row', width: '90%', borderRadius: 10,}}>
+                <AntDesign name="lock" size={24} color="black" style={{marginTop: 10, marginLeft: 5}}/>
+                <TextInput placeholder="Enter your password" secureTextEntry={true}  style={{padding: 10, width: '80%', fontSize: 16}}></TextInput>
+            </View>
+            
+        </View>
+        {/* <View style={styles.inputText1}>
+            <Text style={{fontSize: 18,}}>Password</Text>
+            <View style={{flexDirection: 'row'}}>
+                <AntDesign name="lock" size={24} color="black" style={{marginTop: 20,}}/>
+                <TextInput placeholder="Enter your password" secureTextEntry={true} style={{padding: 15, borderBottomWidth: 2, borderBottomColor: 'black', width: '80%', marginTop: 10}}></TextInput>
+            </View>
+            
+        </View> */}
 
         <View style={{alignItems: 'center'}}>
             <TouchableOpacity style={
