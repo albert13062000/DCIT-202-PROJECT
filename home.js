@@ -5,10 +5,12 @@ import { ScrollView, TextInput } from 'react-native-gesture-handler';
 import { AntDesign } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-export default function Home() {
+export default function Home( { navigation } ) {
   
   return (
     <SafeAreaView style={styles.mainForm}>
+
+      {/*---MAIN HEADER---*/}
       <View style={{flexDirection: 'row'}}>
         <AntDesign name="menufold" size={24} color="black" />
         <Text style={{marginHorizontal: 130, fontSize: 20, fontWeight: 'bold'}}>SG</Text>
@@ -19,6 +21,7 @@ export default function Home() {
         <Text style={{color: 'grey', marginTop: 14, fontSize: 16}}>Sort by <AntDesign name="down" size={15} color="black" /></Text>
       </View>
       
+      {/*----Horizontal scroll----*/}
       <View>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{marginTop: 10, flexDirection: 'row', marginBottom: 10}}>
           <TouchableOpacity style={{backgroundColor: 'white', borderRadius: 20, paddingHorizontal: 30, paddingVertical: 10, marginRight: 10,}}>
@@ -42,6 +45,7 @@ export default function Home() {
         </ScrollView>
       </View>
 
+      {/*---display items---*/}
       <View>
         <ScrollView>
           <View>
@@ -54,8 +58,9 @@ export default function Home() {
                   <Text style={{fontSize: 18, fontWeight: '400', paddingTop: 5}}>$ 145,000</Text>
                 </View>
                 <View style={{marginLeft: 40, marginTop: 20}}>
-                  <TouchableOpacity style={{backgroundColor: 'lightgreen', paddingVertical: 10, paddingHorizontal: 30, borderRadius: 20}}>
-                    <Text>Buy Now</Text>
+                  <TouchableOpacity style={{backgroundColor: 'black', paddingVertical: 10, paddingHorizontal: 30, borderRadius: 20}} 
+                    onPress={() => navigation.navigate('Details')}  >
+                    <Text style={{color: 'white'}}>Buy Now</Text>
                   </TouchableOpacity>
                 </View>
               </View>
@@ -72,8 +77,8 @@ export default function Home() {
                   <Text style={{fontSize: 18, fontWeight: '400', paddingTop: 5}}>$ 220,000</Text>
                 </View>
                 <View style={{marginLeft: 40, marginTop: 20}}>
-                  <TouchableOpacity style={{backgroundColor: 'lightgreen', paddingVertical: 10, paddingHorizontal: 30, borderRadius: 20}}>
-                    <Text>Buy Now</Text>
+                  <TouchableOpacity style={{backgroundColor: 'black', paddingVertical: 10, paddingHorizontal: 30, borderRadius: 20}} onPress={() => navigation.navigate('Details')}  >
+                    <Text style={{color: 'white'}}>Buy Now</Text>
                   </TouchableOpacity>
                 </View>
               </View>
@@ -90,8 +95,8 @@ export default function Home() {
                   <Text style={{fontSize: 18, fontWeight: '400', paddingTop: 5}}>$ 145,000</Text>
                 </View>
                 <View style={{marginLeft: 50, marginTop: 20}}>
-                  <TouchableOpacity style={{backgroundColor: 'darkgrey', paddingVertical: 10, paddingHorizontal: 30, borderRadius: 20}}>
-                    <Text>Buy Now</Text>
+                  <TouchableOpacity style={{backgroundColor: 'black', paddingVertical: 10, paddingHorizontal: 30, borderRadius: 20}} onPress={() => navigation.navigate('Details')}  >
+                    <Text style={{color: 'white'}}>Buy Now</Text>
                   </TouchableOpacity>
                 </View>
               </View>
@@ -100,7 +105,7 @@ export default function Home() {
 
           <View>
             <View style={styles.items}>
-              <Image source={require('./assets/Mercedes.jpg')} style={{width: '100%', height: 250, alignItems: 'center', borderRadius: 10,}}></Image>
+              <Image source={require('./assets/Jaguar.jpg')} style={{width: '100%', height: 250, alignItems: 'center', borderRadius: 10,}}></Image>
               
               <View style={{flexDirection: 'row'}}>
                 <View>
@@ -108,8 +113,16 @@ export default function Home() {
                   <Text style={{fontSize: 18, fontWeight: '400', paddingTop: 5}}>$ 89,000</Text>
                 </View>
                 <View style={{marginLeft: 60, marginTop: 20, marginBottom: 100}}>
-                  <TouchableOpacity style={{backgroundColor: 'lightgreen', paddingVertical: 10, paddingHorizontal: 30, borderRadius: 20}}>
-                    <Text>Buy Now</Text>
+                  <TouchableOpacity 
+                    style={{
+                      backgroundColor: 'black', 
+                      paddingVertical: 10, 
+                      paddingHorizontal: 30, 
+                      borderRadius: 20
+                    }}
+                    onPress={() => navigation.navigate('Details')} 
+                  >
+                    <Text style={{color: 'white'}}>Buy Now</Text>
                   </TouchableOpacity>
                 </View>
               </View>
@@ -118,13 +131,14 @@ export default function Home() {
 
         </ScrollView>
       </View>
+      {/*---^End^--Display Items END---*/}
 
     </SafeAreaView>
     );
   }
   const styles = StyleSheet.create ({
     mainForm: {
-      padding: 20, 
+      padding: 20,
       flex: 1, 
       backgroundColor: '#f5f3ed',
     },
