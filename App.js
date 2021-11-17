@@ -7,6 +7,9 @@ import Landing from './Landing';
 import Home from './home';
 import Details from './Details';
 import Checkout from './checkout';
+import Details1 from './Details1';
+import Details2 from './Details2';
+import Details3 from './Details3';
 
 export default function App({ navigation }) {
   
@@ -21,6 +24,9 @@ export default function App({ navigation }) {
         <Stack.Screen name="Landing" component={ Landing } />
         <Stack.Screen name="Home" component={ Home } />
         <Stack.Screen name="Details" component={ Details } />
+        <Stack.Screen name="Details1" component={ Details1 } />
+        <Stack.Screen name="Details2" component={ Details2 } />
+        <Stack.Screen name="Details3" component={ Details3 } />
         <Stack.Screen name="Checkout" component={ Checkout } />
       </Stack.Navigator>
     </NavigationContainer>

@@ -41,16 +41,16 @@ export default function Landing({ navigation }) {
         </View> */}
         <View style={styles.inputText}>
             <Text style={{fontSize: 18,}}>Username:</Text>
-            <View style={{marginTop: 7, borderWidth: 1, borderColor: 'black', flexDirection: 'row', width: '90%', borderRadius: 10,}}>
-                <AntDesign name="user" size={24} color="black" style={{marginTop: 10, marginLeft: 5}}/>
+            <View style={{marginTop: 7, padding: 5,borderWidth: 1, borderColor: 'black', flexDirection: 'row', width: '90%', borderRadius: 10, backgroundColor: 'white'}}>
+                <AntDesign name="user" size={24} color="black" style={{marginTop: 8, marginLeft: 5}}/>
                 <TextInput placeholder="Enter username" style={{padding: 10, width: '80%', fontSize: 16}}></TextInput>
             </View>
             
         </View>
         <View style={styles.inputText1}>
             <Text style={{fontSize: 18,}}>Username:</Text>
-            <View style={{marginTop: 7, borderWidth: 1, borderColor: 'black', flexDirection: 'row', width: '90%', borderRadius: 10,}}>
-                <AntDesign name="lock" size={24} color="black" style={{marginTop: 10, marginLeft: 5}}/>
+            <View style={{marginTop: 7, padding: 5, borderWidth: 1, borderColor: 'black', flexDirection: 'row', width: '90%', borderRadius: 10, backgroundColor: 'white'}}>
+                <AntDesign name="lock" size={24} color="black" style={{marginTop: 8, marginLeft: 5}}/>
                 <TextInput placeholder="Enter your password" secureTextEntry={true}  style={{padding: 10, width: '80%', fontSize: 16}}></TextInput>
             </View>
             

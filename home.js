@@ -77,7 +77,7 @@ export default function Home( { navigation } ) {
                   <Text style={{fontSize: 18, fontWeight: '400', paddingTop: 5}}>$ 220,000</Text>
                 </View>
                 <View style={{marginLeft: 40, marginTop: 20}}>
-                  <TouchableOpacity style={{backgroundColor: 'black', paddingVertical: 10, paddingHorizontal: 30, borderRadius: 20}} onPress={() => navigation.navigate('Details')}  >
+                  <TouchableOpacity style={{backgroundColor: 'black', paddingVertical: 10, paddingHorizontal: 30, borderRadius: 20}} onPress={() => navigation.navigate('Details1')}  >
                     <Text style={{color: 'white'}}>Buy Now</Text>
                   </TouchableOpacity>
                 </View>
@@ -95,7 +95,7 @@ export default function Home( { navigation } ) {
                   <Text style={{fontSize: 18, fontWeight: '400', paddingTop: 5}}>$ 145,000</Text>
                 </View>
                 <View style={{marginLeft: 50, marginTop: 20}}>
-                  <TouchableOpacity style={{backgroundColor: 'black', paddingVertical: 10, paddingHorizontal: 30, borderRadius: 20}} onPress={() => navigation.navigate('Details')}  >
+                  <TouchableOpacity style={{backgroundColor: 'black', paddingVertical: 10, paddingHorizontal: 30, borderRadius: 20}} onPress={() => navigation.navigate('Details2')}  >
                     <Text style={{color: 'white'}}>Buy Now</Text>
                   </TouchableOpacity>
                 </View>
@@ -120,7 +120,7 @@ export default function Home( { navigation } ) {
                       paddingHorizontal: 30, 
                       borderRadius: 20
                     }}
-                    onPress={() => navigation.navigate('Details')} 
+                    onPress={() => navigation.navigate('Details3')} 
                   >
                     <Text style={{color: 'white'}}>Buy Now</Text>
                   </TouchableOpacity>

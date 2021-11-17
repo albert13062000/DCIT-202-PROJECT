@@ -5,7 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { AntDesign } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 
-export default function Details ({ navigation }) {
+export default function Details3 ({ navigation }) {
     return(
         <SafeAreaView style={styles.mainForm}>
             <ScrollView>
@@ -20,10 +20,10 @@ export default function Details ({ navigation }) {
 
                 <View>
                     <View >
-                        <Image source={require('./assets/Mercedes.jpg')} style={{width: '100%', height: 250, alignItems: 'center', borderRadius: 10,}}></Image>
+                        <Image source={require('./assets/Jaguar.jpg')} style={{width: '100%', height: 250, alignItems: 'center', borderRadius: 10,}}></Image>
                         
                         <View style={{backgroundColor: 'white', padding: 20, marginTop: 20, borderRadius: 5}}>
-                            <Text style={{fontSize: '23', fontWeight: '500'}}>Mercedes Benz Maybach 2022 - Specs</Text>
+                            <Text style={{fontSize: '23', fontWeight: '500'}}>Jaguar F-Type 2022 - Specs</Text>
                             <Text style={{fontSize: 18, fontWeight: '400', paddingTop: 5}}><Text style={{fontSize: '21', fontWeight: '500'}}>Price - </Text>$ 1,000,000</Text>
                             <Text style={styles.descriptionText}>With a classically beautiful body and V-8-only engine options, the 2022 Jaguar F-type is a throwback sports car of sorts.</Text>
                             <View style={{marginTop: 15}}>

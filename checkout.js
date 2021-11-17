@@ -14,7 +14,7 @@ export default function Checkout ({ navigation }) {
 
                 <Text style={{fontSize: 21, flexDirection: 'row'}}>
                     <TouchableOpacity style={{marginRight: 60}}
-                        onPress={() => navigation.navigate('Details')}>
+                        onPress={() => navigation.navigate('Home')}>
                         <AntDesign name="left" size={21} color="black" />
                     </TouchableOpacity> Confirm Purchase
                 </Text>
